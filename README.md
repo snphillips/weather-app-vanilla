@@ -20,4 +20,3 @@ Screenshots:
 ## To Do
 - Random ZIP generator button?
 - ZIP list library with drop down menu of all ZIPs?
-# weather-app-vanilla

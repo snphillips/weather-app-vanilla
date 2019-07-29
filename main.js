@@ -10,7 +10,7 @@
 
   function lookupWeather() {
 
-
+    clearWeatherData()
 
 
     var zip = document.getElementById("zip").value
@@ -32,6 +32,12 @@
   }
 
    fetchCall(zip)
+
+     function clearErrorMessage(){
+       document.getElementById('bad-zip-error-message').innerHTML = ``
+     }
+
+     clearErrorMessage()
 
 
    // Parsing the weather data from the returned JSON
@@ -62,6 +68,18 @@
     document.getElementById('sunrise').innerHTML = `Sunrise: ${sunrise}`
     document.getElementById('sunset').innerHTML = `Sunset: ${sunset}`
   // updateWeatherGIF();
+  }
+
+
+    function clearWeatherData(){
+      document.getElementById('location').innerHTML = ` `
+      document.getElementById('weather').innerHTML = ` `
+      document.getElementById('current').innerHTML = ` `
+      document.getElementById('min').innerHTML = ` `
+      document.getElementById('max').innerHTML = ` `
+      document.getElementById('humidity').innerHTML = ` `
+      document.getElementById('sunrise').innerHTML = ` `
+      document.getElementById('sunset').innerHTML = ` `
   }
 
 

@@ -1,0 +1,16 @@
+TODO:
+
+-so that enter works
+-random zip?
+-spinner?
+-style
+
+
+
+HOWTO:
+
+To run, merely open index.html in a browser.
+
+update surge site:
+
+surge --domain https://weathergif.surge.sh/

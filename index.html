@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>WeatherGIF</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- moment.js for simple time manipulation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.js"></script>
+
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div id='weather-app'>
+      <!-- <h1>Today's Weather</h1> -->
+
+      <form class="zip-input-form">
+
+        <input id="zip"
+               type=""
+               name=""
+               value=""
+               placeholder="enter zip code to learn current weather"></input>
+
+        <input id="button"
+               type="button"
+               name="button"
+               value="submit"></input>
+
+        <p id="bad-zip-error-message"></p>
+
+      </form>
+
+
+      <p><span id="location"></span><span id="weather"></span></p>
+      <div class="response">
+        <p><span id="current"></span></p>
+        <p><span id="min"></span></p>
+        <p><span id="max"></span></p>
+        <p><span id="humidity"></span></p>
+        <p><span id="sunrise"></span></p>
+        <p><span id="sunset"></span></p>
+     </div>
+
+     <!-- A different weather gif will load depending on weather description -->
+       <img src='https://media.giphy.com/media/wlTNXmte8nnqg/giphy.gif'
+            class='weatherGIF'>
+
+   </div>
+
+      <script src="main.js"></script>
+
+  </body>
+</html>

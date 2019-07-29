@@ -27,7 +27,7 @@
       })
       .catch((error) => {
         console.log(error)
-        // $('#bad-zip-error-message').html("I can't find that zip. Try a different one.")
+        document.getElementById('bad-zip-error-message').innerHTML = `I can't find that zip. Try a different one.`
     })
   }
 

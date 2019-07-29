@@ -59,15 +59,15 @@
 
    // Display weather conditions
    function updateWeather(location, weather, currentTemp, tempMin, tempMax, humidity, sunrise, sunset) {
-    document.getElementById('location').innerHTML = `The weather in ${location}:`
-    document.getElementById('weather').innerHTML = `${weather}`
-    document.getElementById('current').innerHTML = `Temperature: ${currentTemp} °F`
-    document.getElementById('min').innerHTML = `Low: ${tempMin} °F`
-    document.getElementById('max').innerHTML = `High: ${tempMax} °F`
-    document.getElementById('humidity').innerHTML = `Humidity: ${humidity}%`
-    document.getElementById('sunrise').innerHTML = `Sunrise: ${sunrise}`
-    document.getElementById('sunset').innerHTML = `Sunset: ${sunset}`
-  // updateWeatherGIF();
+     document.getElementById('location').innerHTML = `The weather in ${location}:`
+     document.getElementById('weather').innerHTML = `${weather}`
+     document.getElementById('current').innerHTML = `Temperature: ${currentTemp} °F`
+     document.getElementById('min').innerHTML = `Low: ${tempMin} °F`
+     document.getElementById('max').innerHTML = `High: ${tempMax} °F`
+     document.getElementById('humidity').innerHTML = `Humidity: ${humidity}%`
+     document.getElementById('sunrise').innerHTML = `Sunrise: ${sunrise}`
+     document.getElementById('sunset').innerHTML = `Sunset: ${sunset}`
+     updateWeatherGIF();
   }
 
 
@@ -80,6 +80,102 @@
       document.getElementById('humidity').innerHTML = ` `
       document.getElementById('sunrise').innerHTML = ` `
       document.getElementById('sunset').innerHTML = ` `
+  }
+
+
+
+    function updateWeatherGIF(){
+
+    let weatherDescription = ''
+    // In the function updateWeather, #weather is updated with a weather description
+    // provided by the API call. Whatever that value is, becomes weatherDescription.
+    weatherDescription = document.getElementById('weather').innerHTML
+    console.log("weatherDescription is: " + weatherDescription)
+
+    var imageGIF = document.querySelector("img");
+
+
+   // Al Roker in rain
+    if ((weatherDescription === 'heavy intensity rain') ||
+        (weatherDescription === 'moderate rain')) {
+          // console.log('rain Al Roker gif')
+          imageGIF.setAttribute('src', 'https://media.giphy.com/media/xUPGcdhiQf2vbfDCyk/giphy.gif')
+    }
+    // Claymation rain cloud
+    else if (weatherDescription === 'rain') {
+          // console.log('rain Al Roker gif')
+          imageGIF.setAttribute('src', 'https://media.giphy.com/media/hk6czgfmwVJS0/giphy.gif')
+    }
+
+    // Al Roker in light rain
+    else if ((weatherDescription === 'light rain') ||
+             (weatherDescription === 'drizzle') ||
+             (weatherDescription === 'light intensity drizzle drizzle') ||
+             (weatherDescription === 'heavy intensity drizzle')) {
+               // console.log('light rain & drizzle Al Roker gif')
+               imageGIF.setAttribute('src', 'https://media.giphy.com/media/xUPGcILSlV4VjCZ9PG/giphy.gif')
+             }
+    // cat flying through sky
+    else if (weatherDescription === 'clear sky'){
+      // console.log('clear sky cat gif')
+      imageGIF.setAttribute('src', 'https://media.giphy.com/media/VxbvpfaTTo3le/giphy.gif')
+    }
+    // Al Roker in snow
+    else if (weatherDescription === 'snow'){
+      // console.log('snow gif')
+      imageGIF.setAttribute('src', 'https://media.giphy.com/media/xUPGcChZRE8p2djeiQ/giphy.gif')
+    }
+    // hanging clouds
+    else if (weatherDescription === 'few clouds') {
+      // console.log('hanging clouds gif')
+      imageGIF.setAttribute('src', 'https://media.giphy.com/media/h0VzgrFX9AKXK/giphy.gif')
+    }
+    // sloth clouds
+    else if ((weatherDescription === 'broken clouds') ||
+             (weatherDescription === 'clouds') ||
+             (weatherDescription === 'scattered clouds')) {
+               // console.log('sloth clouds gif')
+              imageGIF.setAttribute('src', 'https://media.giphy.com/media/rrFcUcN3MFmta/giphy.gif')
+    }
+    // B&W moody cloudy sky
+    else if (weatherDescription === 'overcast clouds') {
+      // console.log('soup gif')
+      imageGIF.setAttribute('src', 'https://media.giphy.com/media/lKKXOCVviOAXS/giphy.gif')
+    }
+    // dust gif
+    else if (weatherDescription === 'dust') {
+      // console.log('soup gif')
+      imageGIF.setAttribute('src', 'https://media.giphy.com/media/l4pSWPz4u8zQcXjY4/giphy.gif')
+    }
+    // oscar the grouch
+    else if (weatherDescription === 'light snow') {
+      // console.log('oscar light snow gif')
+      imageGIF.setAttribute('src', 'https://media.giphy.com/media/4jGoaiwq9oRri/giphy.gif')
+    }
+    // cup of mist
+    else if ((weatherDescription === 'mist') ||
+             (weatherDescription === 'fog')) {
+      imageGIF.setAttribute('src', 'https://media.giphy.com/media/apB1oxVnxPaLu/giphy.gif')
+    }
+    // cat smoke
+    else if ((weatherDescription === 'smoke') ||
+             (weatherDescription === 'haze')) {
+               imageGIF.setAttribute('src', 'https://media.giphy.com/media/HknSLLEbzZCoM/giphy.gif')
+    }
+    // wet cat
+    else if ((weatherDescription === 'sleet') ||
+             (weatherDescription === 'shower sleet')) {
+               imageGIF.setAttribute('src', 'https://media.giphy.com/media/26BGD4XaoPO3zTz9K/giphy.gif')
+    }
+   // elm with umbrellas
+    else if ((weatherDescription === 'rain and snow') ||
+   (weatherDescription === 'light rain and snow') ||
+   (weatherDescription === 'light shower snow') ||
+   (weatherDescription === 'shower snow') ||
+   (weatherDescription === 'heavy shower snow')) {
+     imageGIF.setAttribute('src', 'https://media.giphy.com/media/3osBLtpZ8xhRZRYaGs/giphy.gif')
+    }
+
   }
 
 

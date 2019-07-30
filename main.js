@@ -1,20 +1,24 @@
 (function() {
 
+  document.getElementById("button").addEventListener("click", lookupWeather);
+
+
+
+  function lookupWeather() {
 // When the submit button is clicked, a fetch call is made to
 // the open weather map API, using the user's inputted zip.
 
 // The clearWeatherData & clearErrorMessage functions are to
 // account for edge cases, when a user inputs a bad zip and
 // and receives error messages, then makes an other attempt.
-  document.getElementById("button").addEventListener("click", lookupWeather);
 
-  function lookupWeather() {
-
+    // First clear any weather data or error messages from the screen
     clearWeatherData()
+    clearErrorMessage()
 
-
+    // Whatever value the user types into the zip field
     var zip = document.getElementById("zip").value
-    console.log("zip button clicked and zip is: " + zip)
+
 
     function fetchCall(zip){
       fetch(`https://api.openweathermap.org/data/2.5/weather?zip=${zip}&units=imperial&appid=fb1d469d46d8692c83f7c5a6183ad373`)
@@ -23,7 +27,6 @@
       })
       .then((response) => {
       getWeatherData(response)
-      console.log(response)
       })
       .catch((error) => {
         console.log(error)
@@ -37,7 +40,6 @@
        document.getElementById('bad-zip-error-message').innerHTML = ``
      }
 
-     clearErrorMessage()
 
 
    // Parsing the weather data from the returned JSON
@@ -57,7 +59,7 @@
    }
 
 
-   // Display weather conditions
+   // Display weather description
    function updateWeather(location, weather, currentTemp, tempMin, tempMax, humidity, sunrise, sunset) {
      document.getElementById('location').innerHTML = `The weather in ${location}:`
      document.getElementById('weather').innerHTML = `${weather}`
@@ -65,12 +67,13 @@
      document.getElementById('min').innerHTML = `Low: ${tempMin} °F`
      document.getElementById('max').innerHTML = `High: ${tempMax} °F`
      document.getElementById('humidity').innerHTML = `Humidity: ${humidity}%`
-     document.getElementById('sunrise').innerHTML = `Sunrise: ${sunrise}`
-     document.getElementById('sunset').innerHTML = `Sunset: ${sunset}`
+     // document.getElementById('sunrise').innerHTML = `Sunrise: ${sunrise}`
+     // document.getElementById('sunset').innerHTML = `Sunset: ${sunset}`
      updateWeatherGIF();
   }
 
 
+    // Clears the weather data from previous query
     function clearWeatherData(){
       document.getElementById('location').innerHTML = ` `
       document.getElementById('weather').innerHTML = ` `
@@ -78,8 +81,8 @@
       document.getElementById('min').innerHTML = ` `
       document.getElementById('max').innerHTML = ` `
       document.getElementById('humidity').innerHTML = ` `
-      document.getElementById('sunrise').innerHTML = ` `
-      document.getElementById('sunset').innerHTML = ` `
+      // document.getElementById('sunrise').innerHTML = ` `
+      // document.getElementById('sunset').innerHTML = ` `
   }
 
 
@@ -90,7 +93,7 @@
     // In the function updateWeather, #weather is updated with a weather description
     // provided by the API call. Whatever that value is, becomes weatherDescription.
     weatherDescription = document.getElementById('weather').innerHTML
-    console.log("weatherDescription is: " + weatherDescription)
+    // console.log("weatherDescription is: " + weatherDescription)
 
     var imageGIF = document.querySelector("img");
 

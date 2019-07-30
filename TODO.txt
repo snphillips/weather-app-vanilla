@@ -1,9 +1,9 @@
 TODO:
 
--so that enter works
+-so hittine enter presses button
 -random zip?
 -spinner?
--style
+-mobile style
 
 
 

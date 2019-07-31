@@ -4,10 +4,10 @@ TODO:
 -random zip generator
 -dropdown zip menu
 -spinner?
--mobile styling
 -add footer
 -add favicon
--viewport problem on phone
+-override hideous iOS button
+-don't show city name until GIF has loaded
 
 
 

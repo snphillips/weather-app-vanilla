@@ -46,17 +46,17 @@ input[type=button] {
   font-size: 130%;
   margin: 10px 0px 20px 0px;
   cursor: pointer;
-  transition-delay: 500ms;
 }
 
 input[type=button]:hover {
+  /*transition-delay: 500ms;*/
   background-color: #063c93; /* blue */
 }
 
 #error-message {
   /*font-size: 170%;*/
   display: inline-block;
-  background-color: rgba(221, 73, 19, 1); /* orange */
+  /*background-color: rgba(221, 73, 19, 1); /* orange */*/
   /*display: none;*/
 }
 
@@ -66,13 +66,14 @@ Weather Response
 p {
   padding-left: 10px;
   padding-right: 10px;
-  display: inline-block;
-  background-color: rgba(221, 73, 19, 1); /* orange */
+  /*background-color: rgba(221, 73, 19, 1);*/
   font-size: 180%;
   margin-block-start: 0;
   margin-block-end: 0;
   margin-inline-start: 0;
   margin-inline-end: 0;
+  display: inline-block;
+  text-shadow: 2px 2px 0px rgba(0,0,0,0.5);
 }
 
 .weatherGIF {
@@ -94,12 +95,18 @@ p {
 
   body {
     background: black;
+    width: 100%;
   }
+
+  form {
+    margin-top: 5rem;
+    margin-bottom: 2em;
+}
 
   input[id=zip], select {
     font-size: 18px;
     width: 55%;
-    margin-left: 0;
+    margin-left: 1.5em;
   }
 
   input[type=button] {
@@ -110,9 +117,12 @@ p {
   p {
     padding-left: 5px;
     padding-right: 5px;
-    display: block;
+    margin-left: 1em;
+    margin-bottom: 1em;
     font-size: 25px;
     background-color: initial;
+    display: block;
+    display: none;
   }
 
   .mintemp-result, .maxtemp-result, .humidity-result, .currenttemp-result, .weather-result {
@@ -122,7 +132,6 @@ p {
   .weatherGIF {
     min-height: 0;
     width: 100%;
-    /*margin-top: 25vh;*/
     position: inherit;
   }
 
@@ -133,7 +142,7 @@ p {
 
   form {
     margin-top: 3em;
-    margin-bottom: 1.5em;
+    margin-bottom: 1em;
   }
 
   input[id=zip], select {
@@ -141,12 +150,9 @@ p {
   }
 
   input[type=button] {
-    padding: 5px 5px;
+    padding: 10px 8px;
   }
 
-  .weatherGIF {
-    /*margin-top: 27vh;*/
-  }
 
 
 }

@@ -1,16 +1,17 @@
 TODO:
 
--so hittine enter presses button
--random zip?
+-when user presses enter, function fires
+-random zip generator
+-dropdown zip menu
 -spinner?
--mobile style
+-mobile styling
 
 
 
 HOWTO:
 
-To run, merely open index.html in a browser.
+To run:
+open index.html in a browser.
 
-update surge site:
-
+To update surge site:
 surge --domain https://weathergif.surge.sh/

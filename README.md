@@ -17,6 +17,10 @@ Screenshots:
 - javascript
 - Open Weather API
 
+## To Run Locally
+- Clone repo
+- Open index.html in a browser
+
 ## To Do
 - Random ZIP generator button?
 - ZIP list library with drop down menu of all ZIPs?

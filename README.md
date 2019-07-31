@@ -8,10 +8,11 @@ View the app here: https://weathergif.surge.sh/
 
 Screenshots:
 
-<img src="https://i.imgur.com/sZIOolK.png" width="500" alt="screenshot of app">
-<img src="https://i.imgur.com/sQ76XfT.jpg" width="500" alt="screenshot of app">
-<img src="https://i.imgur.com/iPDNNPO.jpg" width="500" alt="screenshot of app">
-<img src="https://i.imgur.com/7xJLvzx.png" width="500" alt="screenshot of app">
+<img src="https://imgur.com/gfHXKpB.jpg" width="500" alt="screenshot of app">
+<img src="https://imgur.com/6Du63uN.jpg" width="500" alt="screenshot of app">
+<img src="https://imgur.com/Nyh8XL6.jpg" width="500" alt="screenshot of app">
+<img src="https://imgur.com/aZ9OPqq.jpg" width="500" alt="screenshot of app">
+<img src="https://imgur.com/4SMK4Ob.jpg" width="500" alt="screenshot of app">
 
 ## Built With
 - javascript

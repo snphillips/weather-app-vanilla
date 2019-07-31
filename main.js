@@ -10,7 +10,7 @@
     var zip = document.getElementById("zip").value
 
     //===============================
-    // Clears the weather data, in case there was a previous query
+    // Clears the weather data, in case there was a previous query.
     //===============================
     function clearWeatherData(){
       document.getElementById('location').innerHTML = ` `
@@ -165,9 +165,4 @@
 
 }
 )();
-
-
-
-
-
 

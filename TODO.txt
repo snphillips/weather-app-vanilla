@@ -5,6 +5,8 @@ TODO:
 -dropdown zip menu
 -spinner?
 -mobile styling
+-add footer
+-add favicon
 
 
 

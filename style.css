@@ -121,7 +121,12 @@ p {
     display: block;
   }
 
-  .mintemp-result, .maxtemp-result, .humidity-result, .currenttemp-result, .weather-result {
+  .location-result,
+  .mintemp-result,
+  .maxtemp-result,
+  .humidity-result,
+  .currenttemp-result,
+  .weather-result {
     display: none;
   }
 
@@ -132,8 +137,7 @@ p {
   }
 
 
-
-/* TINY iPhone 5 & SE ****************/
+/* TINY like, iPhone 5 & SE ****************/
 @media screen and (max-width: 321px) {
 
   form {

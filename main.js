@@ -15,9 +15,9 @@
     function clearWeatherData(){
       document.getElementById('location').innerHTML = ` `
       document.getElementById('weather').innerHTML = ` `
-      document.getElementById('current').innerHTML = ` `
-      document.getElementById('min').innerHTML = ` `
-      document.getElementById('max').innerHTML = ` `
+      document.getElementById('current-temp').innerHTML = ` `
+      document.getElementById('min-temp').innerHTML = ` `
+      document.getElementById('max-temp').innerHTML = ` `
       document.getElementById('humidity').innerHTML = ` `
     }
     clearWeatherData()
@@ -70,11 +70,11 @@
    // Display weather description
    //===============================
    function updateWeather(location, weather, currentTemp, tempMin, tempMax, humidity) {
-     document.getElementById('location').innerHTML = `The weather in ${location}:`
+     document.getElementById('location').innerHTML = `${location}`
      document.getElementById('weather').innerHTML = `${weather}`
-     document.getElementById('current').innerHTML = `Temperature: ${currentTemp} °F`
-     document.getElementById('min').innerHTML = `Low: ${tempMin} °F`
-     document.getElementById('max').innerHTML = `High: ${tempMax} °F`
+     document.getElementById('current-temp').innerHTML = `Temperature: ${currentTemp} °F`
+     document.getElementById('min-temp').innerHTML = `Low: ${tempMin} °F`
+     document.getElementById('max-temp').innerHTML = `High: ${tempMax} °F`
      document.getElementById('humidity').innerHTML = `Humidity: ${humidity}%`
      updateWeatherGIF();
   }
@@ -112,6 +112,7 @@
         imageGIF.setAttribute('src', 'https://media.giphy.com/media/xUPGcILSlV4VjCZ9PG/giphy.gif');
         break;
       case 'clear sky':
+      case 'sky is clear':
         imageGIF.setAttribute('src', 'https://media.giphy.com/media/VxbvpfaTTo3le/giphy.gif')
         break;
       case 'snow':

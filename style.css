@@ -3,13 +3,10 @@
 General Styling
 =============================*/
 body {
-  background: #4B79A1;   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #283E51, #0A2342);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #283E51, #0A2342);  /*W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: -olinear-gradient(to top, #283E51, #0A2342);
+  background: #000;
   color: rgba(255, 255, 255, .95);
   font-family: 'Vollkorn', serif;
-  height: 100vh;
+  /*height: 100vh;  do I need this?*/
   margin: 0 auto;
   width: 80%;
 }
@@ -97,50 +94,59 @@ p {
 
   body {
     background: black;
-    width: 90%;
   }
 
   input[id=zip], select {
-    font-size: 69%;
-    width: 61%;
+    font-size: 18px;
+    width: 55%;
     margin-left: 0;
   }
 
   input[type=button] {
-    padding: 5px 15px;
-    font-size: 110%;
+    padding: 8px 15px;
+    font-size: 20px;
   }
 
   p {
     padding-left: 5px;
     padding-right: 5px;
-    display: inline-block;
-    font-size: 140%;
+    display: block;
+    font-size: 25px;
+    background-color: initial;
   }
 
-.weatherGIF {
-    min-height: 0;
-    width: 100%;
-    margin-top: 55vh;
-  }
-
-
-/* TINY ***********************/
-@media screen and (max-width: 321px) {
-
-  input[id=zip], select {
-    width: 57%;
+  .mintemp-result, .maxtemp-result, .humidity-result, .currenttemp-result, .weather-result {
+    display: none;
   }
 
   .weatherGIF {
-    margin-top: 60vh;
+    min-height: 0;
+    width: 100%;
+    /*margin-top: 25vh;*/
+    position: inherit;
   }
 
-  p {
-    font-size: 130%;
+
+
+/* TINY iPhone 5 & SE ****************/
+@media screen and (max-width: 321px) {
+
+  form {
+    margin-top: 3em;
+    margin-bottom: 1.5em;
   }
 
+  input[id=zip], select {
+    width: 45%;
+  }
 
+  input[type=button] {
+    padding: 5px 5px;
+  }
+
+  .weatherGIF {
+    /*margin-top: 27vh;*/
+  }
 
 
 }

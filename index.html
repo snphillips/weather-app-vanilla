@@ -20,7 +20,8 @@
 
     <div id='weather-app'>
 
-      <form class="zip-input-form">
+      <div>
+        <form class="zip-input-form">
 
         <input id="zip"
                type=""
@@ -33,23 +34,26 @@
                name="button"
                value="submit"></input>
 
-      </form>
+        </form>
+      </div>
 
-        <p id="bad-zip-error-message" class="error-message"></p>
+      <section>
+        <div><p id="bad-zip-error-message" class="error-message"></p></div>
+        <div><p id="location"><br></p></div>
+        <div><p id="weather" class="weather-result"><br></p></div>
+        <div><p id="current-temp" class="currenttemp-result"><br></p></div>
+        <div><p id="min-temp" class="mintemp-result"><br></p></div>
+        <div><p id="max-temp" class="maxtemp-result"><br></p></div>
+        <div><p id="humidity" class="humidity-result"><br></p></div>
+      </section>
 
-        <div>
-          <p id="location"></p><p id="weather"></p><br>
-          <p id="current"></p><br>
-          <p id="min"></p><br>
-          <p id="max"></p><br>
-          <p id="humidity"></p>
-        </div>
 
-
+       <div>
      <!-- SCTV GIF -->
      <!-- A different weather gif will load depending on weather description -->
-       <img src='https://media.giphy.com/media/wlTNXmte8nnqg/giphy.gif'
-            class='weatherGIF'>
+        <img src='https://media.giphy.com/media/wlTNXmte8nnqg/giphy.gif'
+             class='weatherGIF'>
+       </div>
 
    </div>
 

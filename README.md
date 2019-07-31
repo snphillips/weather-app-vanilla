@@ -19,6 +19,7 @@ Screenshots:
 
 ## To Run Locally
 - Clone repo
+`$ git clone https://github.com/snphillips/weather-app-vanilla.git`
 - Open index.html in a browser
 
 ## To Do

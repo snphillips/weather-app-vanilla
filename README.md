@@ -23,6 +23,11 @@ Screenshots:
 `$ git clone https://github.com/snphillips/weather-app-vanilla.git`
 - Open index.html in a browser
 
+## GIFs By
+- https://giphy.com/emmadarvick
+- https://giphy.com/alessiodevecchi/
+
+
 ## To Do
 - Random ZIP generator button?
 - ZIP list library with drop down menu of all ZIPs?

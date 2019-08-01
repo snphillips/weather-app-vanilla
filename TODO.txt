@@ -4,8 +4,8 @@ TODO:
 -random zip generator
 -dropdown zip menu
 -spinner?
--add footer
 -add favicon
+-add GIF credits
 
 
 
@@ -17,3 +17,9 @@ open index.html in a browser.
 
 To update surge site:
 surge --domain https://weathergif.surge.sh/
+
+
+
+GIFs by:
+https://giphy.com/emmadarvick
+https://giphy.com/alessiodevecchi/

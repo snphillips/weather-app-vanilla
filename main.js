@@ -124,8 +124,10 @@
       case 'light rain':
       case 'drizzle':
       case 'light intensity drizzle':
-      case 'heavy intensity drizzle':
         imageGIF.setAttribute('src', 'https://media.giphy.com/media/xUPGcILSlV4VjCZ9PG/giphy.gif');
+        break;
+      case 'heavy intensity drizzle':
+        imageGIF.setAttribute('src', 'https://media.giphy.com/media/26ufcMjwXjpTHNG1i/giphy.gif');
         break;
       case 'clear sky':
       case 'sky is clear':
@@ -140,8 +142,10 @@
       case 'clouds':
       case 'broken clouds':
       case 'scattered clouds':
-        console.log("clouds, broken clouds, scattered clouds")
         imageGIF.setAttribute('src', 'https://media.giphy.com/media/rrFcUcN3MFmta/giphy.gif')
+        break;
+      case 'broken clouds':
+        imageGIF.setAttribute('src', 'https://media.giphy.com/media/l4FsCBugoWDBUZ9O8/giphy.gif')
         break;
       case 'overcast clouds':
         imageGIF.setAttribute('src', 'https://media.giphy.com/media/lKKXOCVviOAXS/giphy.gif');

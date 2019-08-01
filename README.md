@@ -26,6 +26,15 @@ Screenshots:
 ## GIFs By
 - https://giphy.com/emmadarvick
 - https://giphy.com/alessiodevecchi/
+- https://giphy.com/alroker/
+- https://giphy.com/headexplodie/
+- https://giphy.com/agatheb-b/
+- https://giphy.com/cintascotch
+- https://giphy.com/kreationsministern
+- https://giphy.com/fredaproductions
+- https://giphy.com/natgeowild
+- https://giphy.com/everwhatproductions
+- https://giphy.com/mushbuh
 
 
 ## To Do

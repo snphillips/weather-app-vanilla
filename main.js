@@ -117,9 +117,13 @@
         imageGIF.setAttribute('src', 'https://media.giphy.com/media/xUPGcdhiQf2vbfDCyk/giphy.gif');
         break;
       case 'rain':
-      case 'shower rain' :
-      case 'thunderstorm' :
         imageGIF.setAttribute('src', 'https://media.giphy.com/media/hk6czgfmwVJS0/giphy.gif');
+        break;
+      case 'thunderstorm' :
+        imageGIF.setAttribute('src', 'https://media.giphy.com/media/3oEjIa5lbVSfv8a9s4/giphy.gif');
+        break;
+      case 'shower rain' :
+        imageGIF.setAttribute('src', 'https://media.giphy.com/media/l4FGkdtLGfpUiBdFC/giphy.gif');
         break;
       case 'light rain':
       case 'drizzle':
@@ -140,7 +144,6 @@
         imageGIF.setAttribute('src', 'https://media.giphy.com/media/h0VzgrFX9AKXK/giphy.gif');
         break;
       case 'clouds':
-      case 'broken clouds':
       case 'scattered clouds':
         imageGIF.setAttribute('src', 'https://media.giphy.com/media/rrFcUcN3MFmta/giphy.gif')
         break;
@@ -161,8 +164,10 @@
         imageGIF.setAttribute('src', 'https://media.giphy.com/media/apB1oxVnxPaLu/giphy.gif')
         break;
       case 'haze':
-      case 'smoke':
         imageGIF.setAttribute('src', 'https://media.giphy.com/media/HknSLLEbzZCoM/giphy.gif')
+        break;
+      case 'smoke':
+        imageGIF.setAttribute('src', 'https://media.giphy.com/media/dZBa6EQnbnsHe/giphy.gif')
         break;
       case 'sleet':
       case 'shower sleet':
@@ -171,9 +176,13 @@
       case 'rain and snow':
       case 'light rain and snow':
       case 'light shower snow':
-      case 'shower snow':
-      case 'heavy shower snow':
         imageGIF.setAttribute('src', 'https://media.giphy.com/media/3osBLtpZ8xhRZRYaGs/giphy.gif')
+        break;
+      case 'heavy shower snow':
+        imageGIF.setAttribute('src', 'https://media.giphy.com/media/l378an2e0zaQWvSZW/giphy.gif')
+        break;
+      case 'shower snow':
+        imageGIF.setAttribute('src', 'https://media.giphy.com/media/l2JIaYp6P3WT5Ybu0/giphy.gif')
         break;
       default:
         imageGIF.setAttribute('src', 'https://media.giphy.com/media/9n5UIlRppk91e/giphy.gif');

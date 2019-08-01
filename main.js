@@ -9,6 +9,15 @@
     // Whatever value the user types into the zip field
     var zip = document.getElementById("zip").value
 
+
+     //===============================
+     // Shows the loading spinner
+     //===============================
+    function showSpinner() {
+      document.getElementById("loader").style.display = "block";
+     }
+    showSpinner()
+
      //===============================
      // Clears the weather data, in case there was a previous query.
      //===============================
@@ -75,13 +84,14 @@
    }
 
     //===============================
-    // Removes display: none; from weather description
+    // Removes "display: none;" from weather description
     // This is invoked after GIFs load
     //===============================
     function showWeatherDescription() {
       document.getElementById('weather-description-text').style.display = 'block';
       // console.log("weather description text set to display:block")
     }
+
 
    //===============================
    // Update Weather description
@@ -95,6 +105,14 @@
      document.getElementById('humidity').innerHTML = `Humidity: ${humidity}%`
      updateWeatherGIF();
    }
+
+   //===============================
+   // Hides the loading spinner
+   // Invoked at the image.onload below
+   //===============================
+    function hideSpinner() {
+       document.getElementById("loader").style.display = "none";
+    }
 
    //===============================
    // updates the GIF
@@ -195,6 +213,7 @@
     document.querySelector("img").onload = function() {
       // console.log("GIF loaded");
       showWeatherDescription();
+      hideSpinner();
     };
 
 

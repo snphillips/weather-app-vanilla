@@ -3,9 +3,8 @@ TODO:
 -when user presses enter, function fires
 -random zip generator
 -dropdown zip menu
--spinner?
+-loading spinner?
 -add favicon
--add GIF credits
 
 
 

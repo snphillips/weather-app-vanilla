@@ -24,7 +24,7 @@
 
 
     //===============================
-    // Clears error message, in case there is one.
+    // Clears error message, in case there is an error message.
     //===============================
      function clearErrorMessage(){
        document.getElementById('bad-zip-error-message').innerHTML = ``
@@ -52,7 +52,7 @@
     fetchCall(zip)
 
    //===============================
-   // // Parsing the weather data from the returned JSON
+   // Parsing the weather data from the returned JSON
    //===============================
    function getWeatherData(res){
      let location = res.name
@@ -67,17 +67,17 @@
    }
 
    //===============================
-   // Display weather description
+   // Update Weather description
    //===============================
    function updateWeather(location, weather, currentTemp, tempMin, tempMax, humidity) {
-     document.getElementById('location').innerHTML = `${location}`
      document.getElementById('weather').innerHTML = `${weather}`
+     document.getElementById('location').innerHTML = `${location}`
      document.getElementById('current-temp').innerHTML = `Temperature: ${currentTemp} °F`
      document.getElementById('min-temp').innerHTML = `Low: ${tempMin} °F`
      document.getElementById('max-temp').innerHTML = `High: ${tempMax} °F`
      document.getElementById('humidity').innerHTML = `Humidity: ${humidity}%`
      updateWeatherGIF();
-  }
+   }
 
    //===============================
    // updates the GIF
@@ -90,7 +90,11 @@
 
     let weatherDescription = ''
 
+    // Trying something new: weatherDescription based on updateWeather results
+    // weatherDescription = res.weather[0].description
+
     weatherDescription = document.getElementById('weather').innerHTML
+
     console.log("weatherDescription is: " + weatherDescription)
 
     var imageGIF = document.querySelector("img");

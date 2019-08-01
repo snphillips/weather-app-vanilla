@@ -6,8 +6,7 @@ TODO:
 -spinner?
 -add footer
 -add favicon
--override hideous iOS button
--don't show city name until GIF has loaded
+
 
 
 

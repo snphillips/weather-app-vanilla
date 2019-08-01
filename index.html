@@ -5,7 +5,7 @@
     <title>WeatherGIF</title>
     <meta name="description" content="A weather app that displays animated GIFs to illustrate weather conditions in a selected zip code">
     <meta name="author" content="Sarah Phillips">
-    <meta name="keywords" content="weather,GIF">
+    <meta name="keywords" content="weather,GIF,weather app, weather GIF">
     <meta charset="utf-8" name="viewport" content="width=device-width" initial-scale=1.0>
 
 
@@ -37,8 +37,15 @@
         </form>
       </div>
 
+      <!-- Bad ZIP error message -->
+      <div>
+        <p id="bad-zip-error-message"
+           class="error-message">
+        </p>
+      </div>
+
+      <!-- Weather Description Text -->
       <section id="weather-description-text">
-        <div><p id="bad-zip-error-message" class="error-message"></p></div>
         <div><p id="location"class="location-result"><br></p></div>
         <div><p id="weather" class="weather-result"><br></p></div>
         <div><p id="current-temp" class="currenttemp-result"><br></p></div>
@@ -48,11 +55,11 @@
       </section>
 
 
-       <div>
      <!-- SCTV GIF -->
      <!-- A different weather gif will load depending on weather description -->
-        <img src='https://media.giphy.com/media/wlTNXmte8nnqg/giphy.gif'
-             class='weatherGIF'>
+       <div>
+         <img src='https://media.giphy.com/media/wlTNXmte8nnqg/giphy.gif'
+              class='weatherGIF'>
        </div>
 
    </div>

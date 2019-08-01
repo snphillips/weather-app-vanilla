@@ -3,7 +3,7 @@
   document.getElementById("button").addEventListener("click", lookupWeather);
 
 
-  // The mega function that does it all when user clicks the button
+  // The mega function that does it all when user clicks the submit button
   function lookupWeather() {
 
     // Whatever value the user types into the zip field
@@ -53,7 +53,7 @@
       })
       .catch((error) => {
         console.log(error)
-        showWeatherDescription()
+        // showWeatherDescription()
         document.getElementById('bad-zip-error-message').innerHTML = `I can't find that zip. Try a different one.`
       })
     }
@@ -74,10 +74,13 @@
      updateWeatherDescription(location, weather, currentTemp, tempMin, tempMax, humidity)
    }
 
-    // I've set a 1 second delay to allow for the GIF to load before the
+    //===============================
+    // Removes display: none; from weather description
+    // This is invoked after GIFs load
+    //===============================
     function showWeatherDescription() {
       document.getElementById('weather-description-text').style.display = 'block';
-      console.log("weather description text set to display:block")
+      // console.log("weather description text set to display:block")
     }
 
    //===============================
@@ -104,7 +107,8 @@
 
     var weatherDescription = ''
     weatherDescription = document.getElementById('weather').innerHTML
-    console.log("weatherDescription is: " + weatherDescription)
+    // console.log("weatherDescription is: " + weatherDescription)
+
     var imageGIF = document.querySelector("img");
 
     switch(weatherDescription) {
@@ -171,7 +175,14 @@
         imageGIF.setAttribute('src', 'https://media.giphy.com/media/9n5UIlRppk91e/giphy.gif');
     }
 
-    setTimeout(function(){ showWeatherDescription(); }, 900);
+   //===============================
+   // This ensures that the weather description
+   // isn't displayed until the GIF has loaded
+   //===============================
+    document.querySelector("img").onload = function() {
+      // console.log("GIF loaded");
+      showWeatherDescription();
+    };
 
 
   }

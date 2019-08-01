@@ -67,7 +67,6 @@ Weather Response
   display: none;
 }
 
-
 p {
   padding-left: 10px;
   padding-right: 10px;
@@ -89,6 +88,20 @@ p {
   z-index: -1;
 }
 
+/*========================
+Footer
+==========================*/
+footer {
+  position: absolute;
+  left: 10px;
+  bottom: 5px;
+  font-size: 90%;
+}
+
+.footer-link a {
+  color: rgba(255,255,255, .5);
+  text-decoration: none;
+}
 
 /*******************************
  Media Queries
@@ -141,7 +154,6 @@ p {
     width: 100%;
     position: inherit;
   }
-
 
 /* TINY like, iPhone 5 & SE ****************/
 @media screen and (max-width: 321px) {

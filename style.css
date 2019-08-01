@@ -62,6 +62,12 @@ input[type=button]:hover {
 /*========================
 Weather Response
 ==========================*/
+#weather-description-text {
+  /*color: red;*/
+  display: none;
+}
+
+
 p {
   padding-left: 10px;
   padding-right: 10px;

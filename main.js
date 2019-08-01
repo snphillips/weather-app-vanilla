@@ -9,19 +9,18 @@
     // Whatever value the user types into the zip field
     var zip = document.getElementById("zip").value
 
-    //===============================
-    // Clears the weather data, in case there was a previous query.
-    //===============================
-    function clearWeatherData(){
-      document.getElementById('location').innerHTML = ` `
-      document.getElementById('weather').innerHTML = ` `
-      document.getElementById('current-temp').innerHTML = ` `
-      document.getElementById('min-temp').innerHTML = ` `
-      document.getElementById('max-temp').innerHTML = ` `
-      document.getElementById('humidity').innerHTML = ` `
-    }
-    clearWeatherData()
-
+     //===============================
+     // Clears the weather data, in case there was a previous query.
+     //===============================
+     function clearWeatherData(){
+       document.getElementById('location').innerHTML = ` `
+       document.getElementById('weather').innerHTML = ` `
+       document.getElementById('current-temp').innerHTML = ` `
+       document.getElementById('min-temp').innerHTML = ` `
+       document.getElementById('max-temp').innerHTML = ` `
+       document.getElementById('humidity').innerHTML = ` `
+     }
+     clearWeatherData()
 
     //===============================
     // Clears error message, in case there is an error message.
@@ -30,6 +29,14 @@
        document.getElementById('bad-zip-error-message').innerHTML = ``
      }
      clearErrorMessage()
+
+    //===============================
+    // Makes weather description display: none;
+    //===============================
+    function hideWeatherDescription() {
+      document.getElementById('weather-description-text').style.display = 'none';
+    }
+    hideWeatherDescription()
 
     //===============================
     // The API call to Open Weather
@@ -46,6 +53,7 @@
       })
       .catch((error) => {
         console.log(error)
+        showWeatherDescription()
         document.getElementById('bad-zip-error-message').innerHTML = `I can't find that zip. Try a different one.`
       })
     }
@@ -63,13 +71,19 @@
      let weather = res.weather[0].description
 
      console.log(location, currentTemp, tempMin, tempMax, humidity, weather)
-     updateWeather(location, weather, currentTemp, tempMin, tempMax, humidity)
+     updateWeatherDescription(location, weather, currentTemp, tempMin, tempMax, humidity)
    }
+
+    // I've set a 1 second delay to allow for the GIF to load before the
+    function showWeatherDescription() {
+      document.getElementById('weather-description-text').style.display = 'block';
+      console.log("weather description text set to display:block")
+    }
 
    //===============================
    // Update Weather description
    //===============================
-   function updateWeather(location, weather, currentTemp, tempMin, tempMax, humidity) {
+   function updateWeatherDescription(location, weather, currentTemp, tempMin, tempMax, humidity) {
      document.getElementById('weather').innerHTML = `${weather}`
      document.getElementById('location').innerHTML = `${location}`
      document.getElementById('current-temp').innerHTML = `Temperature: ${currentTemp} °F`
@@ -82,21 +96,15 @@
    //===============================
    // updates the GIF
    //===============================
-   // In the function updateWeather, #weather is updated with the weather description
+   // In the function updateWeatherDescription, #weather is updated with the weather description
    // provided by the API call. Whatever that value is, becomes "weatherDescription".
    // Then the switch statement below sets the innerHTML to GIF, depending on
    // what weatherdescription is.
    function updateWeatherGIF(){
 
-    let weatherDescription = ''
-
-    // Trying something new: weatherDescription based on updateWeather results
-    // weatherDescription = res.weather[0].description
-
+    var weatherDescription = ''
     weatherDescription = document.getElementById('weather').innerHTML
-
     console.log("weatherDescription is: " + weatherDescription)
-
     var imageGIF = document.querySelector("img");
 
     switch(weatherDescription) {
@@ -160,8 +168,11 @@
         imageGIF.setAttribute('src', 'https://media.giphy.com/media/3osBLtpZ8xhRZRYaGs/giphy.gif')
         break;
       default:
-        imageGIF.setAttribute('src', 'https://media.giphy.com/media/9n5UIlRppk91e/giphy.gif');;
+        imageGIF.setAttribute('src', 'https://media.giphy.com/media/9n5UIlRppk91e/giphy.gif');
     }
+
+    setTimeout(function(){ showWeatherDescription(); }, 900);
+
 
   }
 

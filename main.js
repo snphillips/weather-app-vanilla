@@ -58,7 +58,7 @@
         return response.json()
       })
       .then((response) => {
-        getWeatherData(response)
+        parseWeatherData(response)
       })
       .catch((error) => {
         console.log(error)
@@ -71,7 +71,7 @@
    //===============================
    // Parsing the weather data from the returned JSON
    //===============================
-   function getWeatherData(res){
+   function parseWeatherData(res){
      var location = res.name
      var currentTemp = Math.round(res.main.temp)
      var tempMin = Math.round(res.main.temp_min)
@@ -92,7 +92,6 @@
       // console.log("weather description text set to display:block")
     }
 
-
    //===============================
    // Update Weather description
    //===============================
@@ -103,9 +102,8 @@
      document.getElementById('min-temp').innerHTML = `Low: ${tempMin} °F`
      document.getElementById('max-temp').innerHTML = `High: ${tempMax} °F`
      document.getElementById('humidity').innerHTML = `Humidity: ${humidity}%`
-     updateWeatherGIF(weather, currentTemp);
+     updateWeatherGIF(weather, currentTemp, humidity);
    }
-
 
    //===============================
    // Hides the loading spinner
@@ -115,127 +113,15 @@
        document.getElementById("loader").style.display = "none";
     }
 
-   //===============================
-   // updates the GIF
-   //===============================
-   // In the function updateWeatherDescription, #weather is updated with the weather description
-   // provided by the API call. Whatever that value is, becomes "weatherDescription".
-   // Then the switch statement below sets the innerHTML to GIF, depending on
-   // what weatherdescription is.
-   // function updateWeatherGIF(){
 
-   //  var weatherDescription = ''
-   //  weatherDescription = document.getElementById('weather').innerHTML
-   //  // console.log("weatherDescription is: " + weatherDescription)
+    //===============================
+    // updates the GIF
+    //===============================
+    function updateWeatherGIF(weather, currentTemp, humidity){
 
-   //  var imageGIF = document.querySelector("img");
-
-   //  switch(weatherDescription) {
-   //    case 'heavy intensity rain':
-   //    case 'moderate rain':
-   //      imageGIF.setAttribute('src', 'https://media.giphy.com/media/xUPGcdhiQf2vbfDCyk/giphy.gif');
-   //      break;
-   //    case 'rain':
-   //      imageGIF.setAttribute('src', 'https://media.giphy.com/media/hk6czgfmwVJS0/giphy.gif');
-   //      break;
-   //    case 'thunderstorm' :
-   //      imageGIF.setAttribute('src', 'https://media.giphy.com/media/3oEjIa5lbVSfv8a9s4/giphy.gif');
-   //      break;
-   //    case 'shower rain' :
-   //      imageGIF.setAttribute('src', 'https://media.giphy.com/media/l4FGkdtLGfpUiBdFC/giphy.gif');
-   //      break;
-   //    case 'light rain':
-   //    case 'drizzle':
-   //    case 'light intensity drizzle':
-   //      imageGIF.setAttribute('src', 'https://media.giphy.com/media/xUPGcILSlV4VjCZ9PG/giphy.gif');
-   //      break;
-   //    case 'heavy intensity drizzle':
-   //      imageGIF.setAttribute('src', 'https://media.giphy.com/media/26ufcMjwXjpTHNG1i/giphy.gif');
-   //      break;
-   //    case 'clear sky':
-   //    case 'sky is clear':
-   //    // Kitty
-   //      imageGIF.setAttribute('src', 'https://media.giphy.com/media/VxbvpfaTTo3le/giphy.gif')
-   //      break;
-   //    case 'clear sky':
-   //    case 'sky is clear':
-   //    // Kramer
-   //      imageGIF.setAttribute('src', 'https://media.giphy.com/media/5xqKWd6761tkY/giphy.gif')
-   //      break;
-   //    case 'snow':
-   //      imageGIF.setAttribute('src', 'https://media.giphy.com/media/xUPGcChZRE8p2djeiQ/giphy.gif');
-   //      break;
-   //    case 'few clouds':
-   //      imageGIF.setAttribute('src', 'https://media.giphy.com/media/h0VzgrFX9AKXK/giphy.gif');
-   //      break;
-   //    case 'clouds':
-   //    case 'scattered clouds':
-   //      imageGIF.setAttribute('src', 'https://media.giphy.com/media/rrFcUcN3MFmta/giphy.gif')
-   //      break;
-   //    case 'broken clouds':
-   //      imageGIF.setAttribute('src', 'https://media.giphy.com/media/l4FsCBugoWDBUZ9O8/giphy.gif')
-   //      break;
-   //    case 'overcast clouds':
-   //      imageGIF.setAttribute('src', 'https://media.giphy.com/media/lKKXOCVviOAXS/giphy.gif');
-   //      break;
-   //    case 'dust':
-   //      imageGIF.setAttribute('src', 'https://media.giphy.com/media/l4pSWPz4u8zQcXjY4/giphy.gif')
-   //      break;
-   //    case 'light snow':
-   //      imageGIF.setAttribute('src', 'https://media.giphy.com/media/4jGoaiwq9oRri/giphy.gif');
-   //      break;
-   //    case 'mist':
-   //    case 'fog':
-   //      imageGIF.setAttribute('src', 'https://media.giphy.com/media/apB1oxVnxPaLu/giphy.gif')
-   //      break;
-   //    case 'haze':
-   //      imageGIF.setAttribute('src', 'https://media.giphy.com/media/HknSLLEbzZCoM/giphy.gif')
-   //      break;
-   //    case 'smoke':
-   //      imageGIF.setAttribute('src', 'https://media.giphy.com/media/dZBa6EQnbnsHe/giphy.gif')
-   //      break;
-   //    case 'sleet':
-   //    case 'shower sleet':
-   //      imageGIF.setAttribute('src', 'https://media.giphy.com/media/26BGD4XaoPO3zTz9K/giphy.gif')
-   //      break;
-   //    case 'rain and snow':
-   //    case 'light rain and snow':
-   //    case 'light shower snow':
-   //      imageGIF.setAttribute('src', 'https://media.giphy.com/media/3osBLtpZ8xhRZRYaGs/giphy.gif')
-   //      break;
-   //    case 'heavy shower snow':
-   //      imageGIF.setAttribute('src', 'https://media.giphy.com/media/l378an2e0zaQWvSZW/giphy.gif')
-   //      break;
-   //    case 'shower snow':
-   //      imageGIF.setAttribute('src', 'https://media.giphy.com/media/l2JIaYp6P3WT5Ybu0/giphy.gif')
-   //      break;
-   //    default:
-   //      imageGIF.setAttribute('src', 'https://media.giphy.com/media/9n5UIlRppk91e/giphy.gif');
-   //  }
-
-
-
-
-
-
-
-
-
-
-
-
-    function updateWeatherGIF(weather, currentTemp){
-
-    var weatherDescription = weather
-
-    // In the function updateWeather, #weather is updated with a weather description
-    // provided by the API call. Whatever that value is, becomes weatherDescription.
-    // weatherDescription = document.getElementById('weather').innerHTML
-
-    console.log("weatherDescription:", weatherDescription, "temperature: ", currentTemp, "weather: ", weather)
-
+    // Getting data from parseWeatherData
+    console.log("weather: ", weather, "temperature: ", currentTemp, "humidity:", humidity)
     var imageGIF = document.querySelector("img");
-
 
    // Al Roker in rain
     if ((weather === 'heavy intensity rain') ||
@@ -279,6 +165,28 @@
               (currentTemp > 90)
              ){
               imageGIF.setAttribute('src', 'https://media.giphy.com/media/5xqKWd6761tkY/giphy.gif')
+    }
+    // slipping penguin
+    else if (
+              ((weather === 'clear sky') ||
+              (weather === 'sky is clear') ||
+              (weather === 'few clouds') ||
+              (weather === 'broken clouds') ||
+              (weather === 'scattered clouds')) &&
+              (currentTemp < 25)
+             ){
+              imageGIF.setAttribute('src', 'https://media.giphy.com/media/BvBEozfsXWWHe/giphy.gif')
+    }
+    // melting popcicle
+    else if (
+              ((weather === 'clear sky') ||
+              (weather === 'sky is clear') ||
+              (weather === 'few clouds') ||
+              (weather === 'broken clouds') ||
+              (weather === 'scattered clouds')) &&
+              (humidity > 80)
+             ){
+              imageGIF.setAttribute('src', 'https://media.giphy.com/media/xUA7b0fCaEIjdwJXTa/giphy.gif')
     }
     // Al Roker in snow
     else if (weather === 'snow'){
@@ -328,12 +236,17 @@
                imageGIF.setAttribute('src', 'https://media.giphy.com/media/26BGD4XaoPO3zTz9K/giphy.gif')
     }
    // elves with umbrellas
-    else if ((weather === 'rain and snow') ||
-   (weather === 'light rain and snow') ||
-   (weather === 'light shower snow') ||
-   (weather === 'shower snow') ||
-   (weather === 'heavy shower snow')) {
+    else if (
+             (weather === 'rain and snow') ||
+             (weather === 'light rain and snow') ||
+             (weather === 'light shower snow') ||
+             (weather === 'shower snow')
+             ) {
      imageGIF.setAttribute('src', 'https://media.giphy.com/media/3osBLtpZ8xhRZRYaGs/giphy.gif')
+    }
+    // spinning slushy. replace this one
+    else if (weather === 'heavy shower snow') {
+     imageGIF.setAttribute('src', 'https://media.giphy.com/media/l378an2e0zaQWvSZW/giphy.gif')
     }
    // Dog digging on moon
     else {
@@ -343,21 +256,10 @@
   }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
    //===============================
    // This ensures that the weather description
    // isn't displayed until the GIF has loaded
+   // It also hides the spinner
    //===============================
     document.querySelector("img").onload = function() {
       // console.log("GIF loaded");
@@ -365,9 +267,7 @@
       hideSpinner();
     };
 
-
   // }
-
 
 }
 

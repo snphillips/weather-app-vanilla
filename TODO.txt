@@ -1,24 +1,11 @@
+
 TODO:
 
+-replace spinner with cooler one
+-add favicon
 -when user presses enter, function fires
 -random zip generator
--dropdown zip menu
--loading spinner?
--add favicon
+-dropdown zip menu (too long a list to be useful?)
+-GIFs that represent temperature? extreem cold & heat or humidity?
 
 
-
-
-HOWTO:
-
-To run:
-open index.html in a browser.
-
-To update surge site:
-surge --domain https://weathergif.surge.sh/
-
-
-
-GIFs by:
-https://giphy.com/emmadarvick
-https://giphy.com/alessiodevecchi/

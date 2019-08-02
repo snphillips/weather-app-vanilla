@@ -6,6 +6,5 @@ TODO:
 -when user presses enter, function fires
 -random zip generator
 -dropdown zip menu (too long a list to be useful?)
--GIFs that represent temperature? extreem cold & heat or humidity?
 
 

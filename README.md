@@ -12,6 +12,7 @@ Screenshots:
 <img src="https://i.imgur.com/sQ76XfT.jpg" width="500" alt="screenshot of app">
 <img src="https://i.imgur.com/iPDNNPO.jpg" width="500" alt="screenshot of app">
 <img src="https://i.imgur.com/7xJLvzx.png" width="500" alt="screenshot of app">
+<img src="https://i.imgur.com/G6PItKP.png" width="500" alt="screenshot of app">
 
 ## Built With
 - javascript

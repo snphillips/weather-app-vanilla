@@ -33,7 +33,9 @@ input[id=zip], select {
   width: 20rem;
 }
 
-input[type=button] {
+
+
+#button {
   background-color: rgba(221, 73, 19, 1); /* orange */
   border: none;
   border-radius: 4px;
@@ -132,6 +134,7 @@ Loading Spinner
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
 
 /*******************************
  Media Queries

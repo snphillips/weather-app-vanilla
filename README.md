@@ -43,4 +43,3 @@ Screenshots:
 ## To Do
 - Random ZIP generator button?
 - ZIP list library with drop down menu of all ZIPs?
-- search begins upon hitting return

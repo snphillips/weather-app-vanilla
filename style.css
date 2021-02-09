@@ -151,19 +151,24 @@ Loading Spinner
   }
 
   form {
-    margin-top: 5rem;
+    margin-top: 4rem;
     margin-bottom: 2em;
 }
 
   input[id=zip], select {
     font-size: 18px;
-    width: 55%;
+    width: 80%;
     margin-left: 1.5em;
   }
 
   input[type=button] {
     padding: 8px 15px;
-    font-size: 20px;
+    font-size: 17px;
+    margin-left: 1.3em;
+  }
+
+  #button {
+    margin: 10px 0px 20px 1.5em;
   }
 
   p {

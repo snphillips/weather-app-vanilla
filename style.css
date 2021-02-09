@@ -65,7 +65,6 @@ input[type=button]:hover {
 Weather Response
 ==========================*/
 #weather-description-text {
-  /*color: red;*/
   display: none;
 }
 
@@ -79,6 +78,7 @@ p {
   margin-inline-end: 0;
   display: inline-block;
   text-shadow: 2px 2px 0px rgba(0,0,0,0.5);
+  background-color: rgba(221, 73, 19, 1); /* orange */
 }
 
 .weatherGIF {
@@ -89,6 +89,8 @@ p {
   left: 0;
   z-index: -1;
 }
+
+
 
 /*========================
 Footer

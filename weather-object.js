@@ -142,6 +142,36 @@ weather = [
     src: urlPrefix + "26BGD4XaoPO3zTz9K/giphy.gif",
   },
   {
+    weather: "rain and snow",
+    gifDescription: "elves with umbrellas",
+    src: urlPrefix + "3osBLtpZ8xhRZRYaGs/giphy.gif",
+  },
+  {
+    weather: "light rain and snow",
+    gifDescription: "elves with umbrellas",
+    src: urlPrefix + "3osBLtpZ8xhRZRYaGs/giphy.gif",
+  },
+  {
+    weather: "light shower snow",
+    gifDescription: "elves with umbrellas",
+    src: urlPrefix + "3osBLtpZ8xhRZRYaGs/giphy.gif",
+  },
+  {
+    weather: "shower snow",
+    gifDescription: "elves with umbrellas",
+    src: urlPrefix + "3osBLtpZ8xhRZRYaGs/giphy.gif",
+  },
+  {
+    weather: "heavy shower snow",
+    gifDescription: "spinning slushy. replace this one",
+    src: urlPrefix + "l378an2e0zaQWvSZW/giphy.gif",
+  },
+  {
+    weather: "",
+    gifDescription: "",
+    src: urlPrefix + "",
+  },
+  {
     weather: "",
     gifDescription: "",
     src: urlPrefix + "",

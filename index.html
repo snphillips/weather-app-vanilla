@@ -11,6 +11,9 @@
 
     <link rel="stylesheet" href="style.css">
 
+    <!-- babel in order to be sure that you can use ES6 in your browser -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet">
 
@@ -35,6 +38,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+
   </head>
 
   <body>
@@ -115,7 +119,7 @@
       </footer>
    </div>
 
-      <script src="./js/main.js"></script>
+   <script type="module" src="./main.js"></script>
 
   </body>
 

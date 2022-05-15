@@ -1,7 +1,7 @@
 /* ===============================
   Clears the weather data, in case there was a previous query.
   =============================== */
-export function clearWeatherData() {
+export default function clearWeatherData() {
   console.log("clearning data");
   document.getElementById("location").innerHTML = ` `;
   document.getElementById("weather").innerHTML = ` `;

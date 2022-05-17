@@ -1,0 +1,24 @@
+{
+  "name": "weather-app-vanilla",
+  "version": "1.0.0",
+  "description": "## Project Description",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snphillips/weather-app-vanilla.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/snphillips/weather-app-vanilla/issues"
+  },
+  "homepage": "https://github.com/snphillips/weather-app-vanilla#readme",
+  "devDependencies": {
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2"
+  }
+}

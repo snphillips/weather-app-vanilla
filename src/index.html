@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <title>WeatherGIF</title>
+    <meta name="description" content="A weather app that displays animated GIFs to illustrate weather conditions in a selected zip code">
+    <meta name="author" content="Sarah Phillips">
+    <meta name="keywords" content="weather,GIF,weather app, weather GIF">
+    <meta charset="utf-8" name="viewport" content="width=device-width" initial-scale=1.0>
+
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- babel in order to be sure that you can use ES6 in your browser -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/b9028e174d.js"></script>
+
+    <!-- favicon & icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="./favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+  </head>
+
+  <body>
+
+    <div id='weather-app'>
+
+      <!-- Loading Spinner -->
+      <div id="loader"></div>
+
+      <div>
+
+        <!-- Form -->
+        <!-- onSubmit="return false;" is so form submits on 'enter' -->
+        <form 
+          class="zip-input-form"
+          onSubmit="return false;"
+        >
+
+          <input
+            id="zip"
+            type=""
+            name=""
+            value=""
+            placeholder="enter zip code to learn current weather">
+          </input>
+
+          <input
+            id="button"
+            type="submit"
+            name="button"
+            value="submit">
+          </input>
+
+        </form>
+      </div>
+
+      <!-- Bad ZIP error message -->
+      <div>
+        <p id="bad-zip-error-message"
+           class="error-message">
+        </p>
+      </div>
+
+      <!-- Weather Description Text -->
+      <section id="weather-description-text">
+        <div><p id="location"class="location-result"><br></p></div>
+        <div><p id="weather" class="weather-result"><br></p></div>
+        <div><p id="current-temp" class="currenttemp-result"><br></p></div>
+        <div><p id="min-temp" class="mintemp-result"><br></p></div>
+        <div><p id="max-temp" class="maxtemp-result"><br></p></div>
+        <div><p id="humidity" class="humidity-result"><br></p></div>
+      </section>
+
+
+     <!-- SCTV GIF -->
+     <!-- A different weather gif will load depending on weather description -->
+       <div>
+         <img src='https://media.giphy.com/media/wlTNXmte8nnqg/giphy.gif'
+              class='weatherGIF'>
+       </div>
+
+
+       <!-- Footer -->
+       <footer>
+
+         <span class="footer-link">
+           <a href="https://sarahphillipsdev.surge.sh"
+             id="portfolio-link">by Sarah Phillips</a>
+         </span>
+
+         <span class="footer-link">
+          <a href="https://github.com/snphillips/weather-app-vanilla"
+            id="github-link">
+            <i class="fab fa-github"></i>
+          </a>
+         </span>
+
+      </footer>
+   </div>
+
+   <!-- <script type="module" src="./index.js"></script> -->
+   <script type="module" src="../dist/main.js"></script>
+
+  </body>
+
+</html>

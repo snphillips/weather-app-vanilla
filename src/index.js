@@ -7,46 +7,29 @@ import showWeatherDescription from "./js/showWeatherDescription";
 
 console.log("testing testing");
 
-// (function () {
 document.getElementById("button").addEventListener("click", lookupWeather);
 
-// The mega function that does it all when user clicks the submit button
+// The mega function that does it all when user clicks
+// the submit button
 function lookupWeather() {
-  console.log("button clicked");
   // Whatever value the user types into the zip field
   var zip = document.getElementById("zip").value;
 
-  /* ===============================
-    Shows the loading spinner
-    =============================== */
-  // function showSpinner() {
-  //   document.getElementById("loader").style.display = "block";
-  // }
   showSpinner();
 
-  /* ===============================
-    Clears the weather data, in case there was a previous query.
-    =============================== */
+  // Clears the weather data, in case there was a previous query.
   clearWeatherData();
 
-  /* ===============================
-    Clears error message, in case there is an error message.
-    =============================== */
+  // Clears error message, in case there is an error message.
   clearErrorMessage();
 
-  /* ===============================
-    Makes weather description display: none;
-    =============================== */
-  // function hideWeatherDescription() {
-  //   document.getElementById("weather-description-text").style.display = "none";
-  // }
+  // Makes weather description display: none;
   hideWeatherDescription();
 
-  /* ===============================
-    The API call to Open Weather
-    ===============================
-    This fetch call is made to the Open Weather Map API,
-    using the user's inputted zip. */
+  // The API call to Open Weather
+  // ===============================
+  // This fetch call is made to the Open Weather Map API,
+  // using the user's inputted zip.
   function fetchCall(zip) {
     fetch(
       `https://api.openweathermap.org/data/2.5/weather?zip=${zip}&units=imperial&appid=fb1d469d46d8692c83f7c5a6183ad373`
@@ -103,15 +86,6 @@ function lookupWeather() {
   }
 
   /* ===============================
-    Removes "display: none;" from weather description
-    This is invoked after GIFs load
-    =============================== */
-  // function showWeatherDescription() {
-  //   document.getElementById("weather-description-text").style.display = "block";
-  //   // console.log("weather description text set to display:block")
-  // }
-
-  /* ===============================
     Update Weather description
     =============================== */
   function updateWeatherDescription(
@@ -132,14 +106,6 @@ function lookupWeather() {
     document.getElementById("humidity").innerHTML = `Humidity: ${humidity}%`;
     updateWeatherGIF(weather, currentTemp, humidity);
   }
-
-  /* ===============================
-    Hides the loading spinner
-    Invoked at the image.onload below
-    =============================== */
-  // function hideSpinner() {
-  //   document.getElementById("loader").style.display = "none";
-  // }
 
   /* ===============================
     updates the GIF
@@ -355,4 +321,3 @@ function lookupWeather() {
     hideSpinner();
   };
 }
-// })();

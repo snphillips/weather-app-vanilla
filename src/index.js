@@ -5,8 +5,10 @@ import hideSpinner from "./js/hideSpinner";
 import hideWeatherDescription from "./js/hideWeatherDescription";
 import showWeatherDescription from "./js/showWeatherDescription";
 import updateWeatherDescription from "./js/updateWeatherDescription";
+import fetchCall from "./js/fetchCall";
+// import fetchCall from "./js/fetchCall";
 
-console.log("testing testing");
+console.log("hello world");
 
 document.getElementById("button").addEventListener("click", lookupWeather);
 
@@ -28,85 +30,7 @@ function lookupWeather() {
   hideWeatherDescription();
 
   // The API call to Open Weather
-  // ===============================
-  // This fetch call is made to the Open Weather Map API,
-  // using the user's inputted zip.
-  function fetchCall(zip) {
-    fetch(
-      `https://api.openweathermap.org/data/2.5/weather?zip=${zip}&units=imperial&appid=fb1d469d46d8692c83f7c5a6183ad373`
-    )
-      .then((response) => {
-        return response.json();
-      })
-      .then((response) => {
-        parseWeatherData(response);
-      })
-      .catch((error) => {
-        console.log(error);
-        // showWeatherDescription()
-        document.getElementById(
-          "bad-zip-error-message"
-        ).innerHTML = `I can't find that zip. Try a different one.`;
-      });
-  }
   fetchCall(zip);
-
-  /* ===============================
-    Parsing the weather data from the returned JSON
-    =============================== */
-  function parseWeatherData(res) {
-    var location = res.name;
-    var currentTemp = Math.round(res.main.temp);
-    var tempMin = Math.round(res.main.temp_min);
-    var tempMax = Math.round(res.main.temp_max);
-    var humidity = res.main.humidity;
-    var weather = res.weather[0].description;
-
-    console.log(
-      "location:",
-      location,
-      "currentTemp:",
-      currentTemp,
-      "tempMin:",
-      tempMin,
-      "tempMax:",
-      tempMax,
-      "humidity:",
-      humidity,
-      "weather:",
-      weather
-    );
-    updateWeatherDescription(
-      location,
-      weather,
-      currentTemp,
-      tempMin,
-      tempMax,
-      humidity
-    );
-  }
-
-  /* ===============================
-    Update Weather description
-    =============================== */
-  // function updateWeatherDescription(
-  //   location,
-  //   weather,
-  //   currentTemp,
-  //   tempMin,
-  //   tempMax,
-  //   humidity
-  // ) {
-  //   document.getElementById("weather").innerHTML = weather;
-  //   document.getElementById("location").innerHTML = location;
-  //   document.getElementById(
-  //     "current-temp"
-  //   ).innerHTML = `Temperature: ${currentTemp} °F`;
-  //   document.getElementById("min-temp").innerHTML = `Low: ${tempMin} °F`;
-  //   document.getElementById("max-temp").innerHTML = `High: ${tempMax} °F`;
-  //   document.getElementById("humidity").innerHTML = `Humidity: ${humidity}%`;
-  //   updateWeatherGIF(weather, currentTemp, humidity);
-  // }
 
   /* ===============================
     updates the GIF

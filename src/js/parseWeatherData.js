@@ -1,4 +1,4 @@
-import updateWeatherGIF from "/updateWeatherGIF.js";
+import updateWeatherGIF from "./updateWeatherGIF.js";
 
 /* ===============================
 Parsing the weather data from the returned JSON

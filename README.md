@@ -22,7 +22,7 @@ Screenshots:
 ## To Run Locally
 - Clone repo:
 
-`$ git clone https://github.com/snphillips/weather-app-vanilla.git`
+`git clone https://github.com/snphillips/weather-app-vanilla.git`
 
 - Intall packages:
 
@@ -32,7 +32,7 @@ Screenshots:
 
 `npm run dev`
 
-- A browser window should open up at (http://localhost:3000/
+- A browser window should open up at http://localhost:3000/
 
 ## GIFs By
 - https://giphy.com/emmadarvick

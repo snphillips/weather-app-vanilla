@@ -15,7 +15,6 @@ body {
   height: auto;
 }
 
-
 /*===========================
 Zip form: field & button
 =============================*/
@@ -32,8 +31,6 @@ input[id=zip], select {
   border-radius: 4px;
   width: 20rem;
 }
-
-
 
 #button {
   background-color: rgba(221, 73, 19, 1); /* orange */
@@ -82,6 +79,8 @@ p {
 }
 
 .weatherGIF {
+  /* width: 100%; */
+  /* height: auto; */
   min-width: 100%;
   min-height: 100%;
   position: fixed;
@@ -89,8 +88,6 @@ p {
   left: 0;
   z-index: -1;
 }
-
-
 
 /*========================
 Footer
@@ -106,7 +103,6 @@ footer {
   color: rgba(255,255,255, .5);
   text-decoration: none;
 }
-
 
 /*========================
 Loading Spinner
@@ -141,7 +137,6 @@ Loading Spinner
 /*******************************
  Media Queries
 ********************************/
-
 /* SMALL ***********************/
 @media screen and (max-width: 450px) {
 

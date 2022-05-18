@@ -1,6 +1,6 @@
 let urlPrefix = "https://media.giphy.com/media/";
 
-weather = [
+exports.weatherArray = [
   {
     weather: "heavy intensity rain",
     currentTemp: "",

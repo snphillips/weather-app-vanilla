@@ -2,7 +2,7 @@
   Clears the weather data, in case there was a previous query.
   =============================== */
 export default function clearWeatherData() {
-  console.log("clearning data");
+  // console.log("clearing weather data");
   document.getElementById("location").innerHTML = ` `;
   document.getElementById("weather").innerHTML = ` `;
   document.getElementById("current-temp").innerHTML = ` `;

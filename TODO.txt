@@ -1,10 +1,10 @@
 
 TODO:
 
--add favicon
--when user presses enter, function fires
--random zip generator
--dropdown zip menu (too long a list to be useful?)
--replace generic spinner with cooler one
+- when user presses enter, function fires
+- random zip generator
+- dropdown zip menu (too long a list to be useful?)
+- replace generic spinner with cooler one
+- create server
 
 

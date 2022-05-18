@@ -5,6 +5,7 @@ import hideSpinner from "./js/hideSpinner";
 import hideWeatherDescription from "./js/hideWeatherDescription";
 import showWeatherDescription from "./js/showWeatherDescription";
 import fetchCall from "./js/fetchCall";
+import "./style.css";
 
 // console.log("hello world");
 

@@ -194,6 +194,7 @@ Loading Spinner
     width: 100%;
     position: inherit;
   }
+}
 
 /* TINY like, iPhone 5 & SE ****************/
 @media screen and (max-width: 321px) {

@@ -20,12 +20,21 @@ export default function updateWeatherGIF(weather, currentTemp, humidity) {
 
   console.log("hihi", arrOfWeatherObjects);
 
-  arrOfWeatherObjects.map((item) => {
-    console.log(item.weather, item.src);
-    if (item.weather === weather) {
-      console.log("A MATCH!!!");
-      imageGIF.setAttribute("src", item.src);
-      return;
-    }
-  });
+  // map doesn't make sense b/c we only need to
+  // find a match, then return out of the function
+  // arrOfWeatherObjects.map((item) => {
+  //   console.log(item.weather, item.src);
+  //   if (item.weather === weather) {
+  //     console.log("A MATCH!!!");
+  //     imageGIF.setAttribute("src", item.src);
+  //     return;
+  //   }
+  // });
+
+  // not working yet
+  const found = arrOfWeatherObjects.find(
+    (element) => element.weather === weather
+  );
+  console.log("A MATCH!!!", found);
+  imageGIF.setAttribute("src", found.src);
 }

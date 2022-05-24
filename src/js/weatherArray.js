@@ -43,8 +43,8 @@ exports.weatherArray = [
   },
   {
     weather: "heavy intensity drizzle",
-    gifDescription: "woman in bathing suit, on ground with rain",
-    src: urlPrefix + "",
+    gifDescription: "crema being drizzled onto burrito",
+    src: urlPrefix + "26BkLTOQWzao2Cz6g/giphy.gif",
   },
   {
     weather: "clear sky",
@@ -55,24 +55,6 @@ exports.weatherArray = [
     weather: "sky is clear",
     gifDescription: "cat flying through sky",
     src: urlPrefix + "VxbvpfaTTo3le/giphy.gif",
-  },
-  {
-    weather: "",
-    currentTemp: "> 90",
-    gifDescription: "Kramer turkey",
-    src: urlPrefix + "5xqKWd6761tkY/giphy.gif",
-  },
-  {
-    weather: "",
-    currentTemp: "< 25",
-    gifDescription: "slipping penguin",
-    src: urlPrefix + "BvBEozfsXWWHe/giphy.gif",
-  },
-  {
-    weather: "",
-    currentTemp: "> 85",
-    gifDescription: "melting popcicle",
-    src: urlPrefix + "xUA7b0fCaEIjdwJXTa/giphy.gif",
   },
   {
     weather: "snow",
@@ -86,8 +68,8 @@ exports.weatherArray = [
   },
   {
     weather: "clouds",
-    gifDescription: "",
-    src: urlPrefix + "rrFcUcN3MFmta/giphy.gif",
+    gifDescription: "hand flying a paper airplane through clouds",
+    src: urlPrefix + "3ov9jCKGqeBAUGd596/giphy.gif",
   },
   {
     weather: "scattered clouds",
@@ -96,8 +78,8 @@ exports.weatherArray = [
   },
   {
     weather: "broken clouds",
-    gifDescription: "cloud falls on lady",
-    src: urlPrefix + "rrFcUcN3MFmta/giphy.gif",
+    gifDescription: "pink animated cloud man",
+    src: urlPrefix + "RO5XhlFWOPs6k/giphy.gif",
   },
   {
     weather: "overcast clouds",
@@ -116,8 +98,8 @@ exports.weatherArray = [
   },
   {
     weather: "mist",
-    gifDescription: "",
-    src: urlPrefix + "apB1oxVnxPaLu/giphy.gif",
+    gifDescription: "guy spraying unknown substance onto camera",
+    src: urlPrefix + "f7dMHOk7RUAUFEByOK/giphy.gif",
   },
   {
     weather: "fog",

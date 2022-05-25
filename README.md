@@ -24,6 +24,14 @@ Screenshots:
 
 `git clone https://github.com/snphillips/weather-app-vanilla.git`
 
+- change directory into weather-app-vanilla
+
+`cd weather-app-vanilla`
+
+- Initialize npm:
+
+`npm init`
+
 - Intall packages:
 
 `npm i`

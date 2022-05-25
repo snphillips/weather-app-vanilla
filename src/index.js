@@ -31,6 +31,8 @@ function lookupWeather() {
   // The API call to Open Weather
   fetchCall(zip);
 
+  // document.zip.reset();
+
   /* ===============================
     This ensures that the weather description
     isn't displayed until the GIF has loaded

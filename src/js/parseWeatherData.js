@@ -15,6 +15,8 @@ export default function parseWeatherData(res, zip) {
     console.log(res);
 
     console.log(
+      "zip:",
+      zip,
       "location:",
       location,
       "currentTemp:",

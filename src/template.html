@@ -52,16 +52,17 @@
       <div>
 
         <!-- Form -->
+        <!-- this.reset(); is so form clears on 'enter' -->
         <!-- onSubmit="return false;" is so form submits on 'enter' -->
         <form 
           class="zip-input-form"
-          onSubmit="return false;"
+          onSubmit="this.reset(); return false;"
         >
 
           <input
             id="zip"
             type=""
-            name=""
+            name="zip"
             value=""
             placeholder="enter zip code to learn current weather">
           </input>

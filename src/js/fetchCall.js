@@ -13,7 +13,7 @@ export default function fetchCAll(zipCode) {
     .then((response) => {
       if (response.ok) {
         return response.json().then((response) => {
-          parseWeatherData(response);
+          parseWeatherData(response, zipCode);
         });
       } else if (response.status === 404) {
         return Promise.reject("error 404");

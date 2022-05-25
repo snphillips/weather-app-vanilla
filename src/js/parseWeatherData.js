@@ -3,7 +3,7 @@ import updateWeatherGIF from "./updateWeatherGIF.js";
 /* ===============================
 Parsing the weather data from the returned JSON
 =============================== */
-export default function parseWeatherData(res) {
+export default function parseWeatherData(res, zip) {
   try {
     var location = res.name;
     var currentTemp = Math.round(res.main.temp);
@@ -11,6 +11,8 @@ export default function parseWeatherData(res) {
     var tempMax = Math.round(res.main.temp_max);
     var humidity = res.main.humidity;
     var weather = res.weather[0].description;
+
+    console.log(res);
 
     console.log(
       "location:",
@@ -28,7 +30,7 @@ export default function parseWeatherData(res) {
     );
     // update Weather Description
     document.getElementById("weather").innerHTML = weather;
-    document.getElementById("location").innerHTML = location;
+    document.getElementById("location").innerHTML = location + ", " + zip;
     document.getElementById(
       "current-temp"
     ).innerHTML = `Temperature: ${currentTemp} °F`;
